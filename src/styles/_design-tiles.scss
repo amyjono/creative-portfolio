@@ -1,0 +1,30 @@
+.design-tiles {
+    display: inline-grid;
+  
+    .design-tile {
+      padding: 10px;
+    }
+  
+    .design-tile img {
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+   .design-tiles {
+      grid-template-columns: auto auto;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .design-tiles {
+      grid-template-columns: auto auto auto;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .design-tiles {
+      grid-template-columns: auto auto auto;
+    }
+  }
+  
