@@ -1,4 +1,4 @@
-# amy-johnson
+# creative-portfolio
 
 ## Project setup
 ```
