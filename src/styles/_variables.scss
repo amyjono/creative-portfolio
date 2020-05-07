@@ -28,6 +28,21 @@ html {
 
 }
 
+/* Masonry grid */
+
+.grid {
+  margin: 0 auto;
+
+  .grid-item {
+    width: 300px; 
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+}
+
 @media (max-width: 768px) {
   .content {
      grid-template-columns: auto;
@@ -100,3 +115,4 @@ html {
     padding: 100px 100px 100px 50px;
   }
 }
+
