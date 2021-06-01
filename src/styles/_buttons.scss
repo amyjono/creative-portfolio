@@ -7,7 +7,6 @@
       margin-right: auto;
       margin-top: 40px;
       margin-bottom: 40px;
-      padding: 10px;
     }
     
     a.btn-link {
@@ -17,6 +16,14 @@
 }
 
 /* blob button */
+
+.button-animation {
+    svg {
+      position: absolute;
+      bottom: 0;
+    }
+}
+  
 
 .blob-svg {
     height: 0;
@@ -28,8 +35,9 @@
     margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
-    color: #ffffff;
+    color: $white;
     font-family: 'Lato', 'Helvetica', sans-serif;
+    font-size: 1.2rem;
     font-weight: 300;
     background-color: transparent;
     outline: none;
@@ -46,6 +54,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    border-radius: 30px;
   }
   .blob-btn:after {
     content: "";
@@ -59,7 +68,7 @@
     transition: all 0.3s 0.2s;
   }
   .blob-btn:hover {
-    color: #FFFFFF;
+    color: $white;
     text-decoration: none;
   }
   .blob-btn:hover:after {
@@ -76,7 +85,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: #00bbab;
+    background: $teal;
+    border-radius: 30px;
   }
   .blob-btn__blobs {
     position: relative;
@@ -90,7 +100,7 @@
     top: 2px;
     width: 25%;
     height: 100%;
-    background: #d18de1;
+    background: $purple;
     border-radius: 100%;
     -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
             transform: translate3d(0, 150%, 0) scale(1.7);
@@ -136,3 +146,14 @@
     }
   }
 
+/* Back to top */
+
+#app .vue-back-to-top {
+text-transform: uppercase;
+  .default {
+    background-color: #1678D9;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 30px;
+  }
+}

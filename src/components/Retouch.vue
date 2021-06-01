@@ -1,17 +1,17 @@
 <template>
-    <!-- <div class="container"> -->
     <div>
-        <div class="text-content">
-            <h1>Retouch</h1>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-            mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus 
-            error sit voluptatem accusantium doloremque eopsloi laudantium, totam rem aperiam, 
-            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
-            sunot explicabo.</p>
-        </div>
-        <div v-images-loaded:on.progress="imageProgress" class="grid" ref="grid">
+        <back-to-top text="Back to top" visibleoffset="400"></back-to-top>
+        <div v-images-loaded:on.progress="imageProgress" class="grid fade-in" ref="grid">
             <div class="grid-item" v-for="item in items" v-bind:key="item.id">
-                <img :src="require('../assets/' + item.src)" />
+                <semipolar-spinner
+                    :animation-duration="2000"
+                    :size="65"
+                    color="#00bbab"
+                    class="hideMe"
+                />
+                <expandable-image class="image" :src="require('../assets/retouch/' + item.src)" />
+                <p><small>{{ item.title }}</small></p>
+                <br />
             </div>
         </div>
         <div class="button-container">
@@ -37,7 +37,10 @@
 <script src="../node_modules/vue-images-loaded/vueimagesloaded.js"></script>
 <script> 
 import Vue from 'vue'
+import BackToTop from 'vue-backtotop'
+import ExpandableImage from '../components/ExpandableImage'
 import Masonry from 'masonry-layout'
+import { SemipolarSpinner  } from 'epic-spinners'
 import {VueMasonryPlugin} from 'vue-masonry';
 import imagesLoaded from 'vue-images-loaded'
 
@@ -45,22 +48,32 @@ Vue.use(VueMasonryPlugin)
 
 export default {
     name: 'Retouch',
+    components: { 
+        ExpandableImage,
+        BackToTop,
+        SemipolarSpinner,
+        },
 
     data() {
         return {
             items: [
-                { src: 'stock-image-4.jpg' },
-                { src: 'stock-image-5.jpg' },
-                { src: 'stock-image-6.jpg' },
-                { src: 'stock-image-7.jpg' },
-                { src: 'stock-image-8.jpg' },
-                { src: 'stock-image-9.jpg' },
-                { src: 'stock-image-4.jpg' },
-                { src: 'stock-image-5.jpg' },
-                { src: 'stock-image-6.jpg' },
-                { src: 'stock-image-7.jpg' },
-                { src: 'stock-image-8.jpg' },
-                { src: 'stock-image-9.jpg' },
+                
+                { src: 'coco-chanel-flat.jpg', title: 'Coco Chanel' },
+                { src: 'coco-chanel-stacked-published.jpg', title: 'Coco Chanel' },
+                { src: 'origami-blue-3.jpg', title: 'Ted Baker' },
+                { src: 'colour-by-numbers.jpg', title: 'Ted Baker' },
+                { src: 'Ted-Baker-ELTEN-CORAL.jpg', title: 'Ted Baker' },
+                { src: 'Ted-Baker-CABBLE_CAMEL.jpg', title: 'Ted Baker' },
+                { src: 'delfina-delettrez-rings.jpg', title: 'Delfina Delettrez' },
+                { src: 'fashion-insider-cover.jpg', title: 'Fahsion Insider Magazine' },
+                { src: 'the-outnet-athleisure-01.jpg', title: 'The Outnet' },
+                { src: 'net-a-porter-beauty.jpg', title: 'Net-A-Porter' },
+                { src: 'net-a-porter-boho.jpg', title: 'Net-A-Porter' },
+                { src: 'jennifer-meyer-rings.jpg', title: 'Jennifer Meyer' },
+                { src: 'alice-luker-01.jpg', title: 'Alice Luker' },
+                { src: 'noir-magazine.jpg', title: 'Noir Magazine' },
+                { src: 'net-a-porter-heirloom-jewelry.jpg', title: 'Net-A-Porter' },
+                { src: 'larkspur-and-hawk.jpg', title: 'Larkspur and Hawk' },
             ]
         }
     },
@@ -72,7 +85,6 @@ export default {
     methods: {
         imageProgress(instance, image ) {
         const result = image.isLoaded ? 'loaded' : 'broken';
-        console.log( 'image is ' + result + ' for ' + image.img.src );
 
         var masonry = new Masonry( this.$refs.grid, {
             itemSelector: '.grid-item',

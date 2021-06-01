@@ -1,21 +1,30 @@
 <template>
-    <div class="container">
-        <div class="content">
-            <div class="img-left">
-                <img src="..\assets\stock-image-1.jpg" />
+    <div class="container fade-in" style="min-height: 75vh;">
+        <div class="content col-2">
+            <div class="col">
+                <img src="..\assets\notepad.jpg" />
             </div>
-            <div class="text-right">
+            <div class="col text-right">
                 <h1>About</h1>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                    mollit anim id est eopksio laborum. Sed ut perspiciatis unde omnis istpoe natus 
-                    error sit voluptatem accusantium doloremque eopsloi laudantium, totam rem aperiam, 
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
-                    sunot explicabo.</p>
-                <p> Nemo ernim ipsam voluptatem quia voluptas sit aspernatur aut odit 
-                    aut fugit, sedopk quia consequuntur magni dolores eos qui rationesopl voluptatem 
-                    sequi nesciunt. Neque porro quisquameo est, qui dolorem ipsum quia dolor sit amet, 
-                    eopsmiep consectetur, adipisci velit, seisud quia non numquam eius modi tempora 
-                    incidunt ut labore et dolore wopeir magnam aliquam quaerat voluptatem eoplmuriquisqu</p>
+                <p>Hi! I’m Amy Johnson</p>
+                <p>I enjoy creating graphic design, and elegant UI/UX solutions.</p>
+                <p>I am currently working as a Web Designer &amp; Developer. In my previous career I worked my way up to become a Senior Retoucher for an international online luxury fashion retailer. I have also freelanced as a retoucher at various companies, both in-house and remotely.</p>
+                <p>I have a triple distinction BTEC National Diploma in Graphic Design, and studied Visual Communication – Graphic Design at the University for the Creative Arts in Kent.</p>
+                <div class="button-container">
+                    <router-link to="Contact" class="btn-link">
+                        <button class="blob-btn get-in-touch">
+                            GET IN TOUCH
+                            <span class="blob-btn__inner">
+                                <span class="blob-btn__blobs">
+                                    <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span>
+                                    <span class="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </button>
+                    </router-link>
+                </div>
             </div>
         </div>
     </div>

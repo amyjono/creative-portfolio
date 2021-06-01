@@ -1,0 +1,15 @@
+#race-mate {
+    .entry-content {
+        img {
+            padding-top: 50px;
+        }
+    }
+    .race-mate-images {
+        margin-top: 50px;
+    
+        :nth-child(2),
+        :nth-child(3) {
+            margin-top: 45px;
+        }
+    }
+}

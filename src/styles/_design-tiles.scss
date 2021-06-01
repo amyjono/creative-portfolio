@@ -1,30 +1,52 @@
 .design-tiles {
     display: inline-grid;
+    padding: 40px 0;
   
-    .design-tile {
-      padding: 10px;
+    a {
+      text-decoration: none;
     }
-  
+
+    .design-tile {
+      margin: 10px;
+      position: relative;
+    }
+    
     .design-tile img {
       max-width: 100%;
+      border-radius: 4px;
+    }
+
+    .design-tile-text {
+      color: $almost-black;
+
+      :hover {
+        color: $purple;
+        transition: 0.3s ease;
+      }
     }
   }
   
   @media (min-width: 768px) {
    .design-tiles {
-      grid-template-columns: auto auto;
+      grid-template-columns: 50% 50%;
     }
   }
   
   @media (min-width: 992px) {
     .design-tiles {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 33.3333333333% 33.3333333333% 33.3333333333%;
     }
   }
   
   @media (min-width: 1200px) {
     .design-tiles {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 33.3333333333% 33.3333333333% 33.3333333333%;
     }
   }
-  
+
+.pop:hover{
+  animation: pop 0.3s linear 1;
+}
+@keyframes pop{
+  50%  {transform: scale(0.98);}
+}

@@ -1,6 +1,10 @@
 <template>
     <footer class="main-footer">
-        <strong>&copy; Copyright {{currentDate.getFullYear()}}</strong>
+        <div class="container">
+            <div class="content full-width">
+                <p>&copy; Copyright {{currentDate.getFullYear()}}</p>
+            </div>
+        </div>
     </footer>
 </template>
 
